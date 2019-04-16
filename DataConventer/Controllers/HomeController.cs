@@ -19,15 +19,13 @@ namespace DataConventer.Controllers
         {
             file= new StreamWriter(@"C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\wwwroot\Files\test.txt", true); // logs
             XElement xelement = XElement.Load(@"C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\wwwroot\Files\phone.xml");
-            var emploeyess = CsvConventer();
 
             var action = Path.GetExtension(@"C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\wwwroot\Files\test.txt").Substring(1)+"Convert";
 
             var homePhone = xelement.Elements(); // all elements
             var homePhone1 = from c in xelement.Elements() select c; // group of Object
             var homePhone2 = from c in xelement.Element("Object").Elements() select c; // single properties
-
-
+            
             foreach (var item in homePhone1)
             {
                 
@@ -42,8 +40,7 @@ namespace DataConventer.Controllers
                 // nastepnie dodaj do listy kolekcji           
             }
             file.Close();
-            //return RedirectToAction("");
-            return RedirectToAction(action);
+            return View(CsvConventer().Result);
         }
 
         public IActionResult UploadFile()
@@ -60,15 +57,12 @@ namespace DataConventer.Controllers
             return View("Index");
         }
 
-        public static async Task<List<Users>> CsvConventer()
-        {
-            await Task.Run(() => System.IO.File
-                .ReadAllLines(@"C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\wwwroot\Files\users.csv")
-                .Where(line => line.Length > 1).Select(Users.ParseFromCsvAsync)
-                .ToList());
-            return null; 
-        }
+        public static async Task<Users[]> CsvConventer() =>
 
+            await Task.WhenAll(System.IO.File
+                .ReadAllLines(@"C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\wwwroot\Files\users.csv")
+                .Skip(1)
+                .Where(line => line.Length > 1).Select(Users.ParseFromCsvAsync));
 
     }
 }

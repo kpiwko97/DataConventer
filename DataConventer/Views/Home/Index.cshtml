@@ -1,4 +1,4 @@
-﻿
+﻿@model Users[]
     <!DOCTYPE html>
 
     <html>
@@ -9,26 +9,35 @@
         <title>title</title>
     </head>
     <body>
-    <button id="chooseBtn">Choose File</button>
-    <input asp-controller="Home" id="file-input" type="file" name="name" style="display: none;" />
-    @**table>
+    @*<button id="chooseBtn">Choose File</button>
+    <input asp-controller="Home" id="file-input" type="file" name="name" style="display: none;" />*@
+    <table class="table table-striped">
         <thead>
-        <tr><th>Parametr</th></tr>
+        <tr>
+            <th>EmployeeType </th>
+            <th>Id</th>
+            <th>Email</th>
+        </tr>
         </thead>
         <tbody>
         @foreach (var a in @Model)
         {
-            <tr><td>@a</td></tr>
+            <tr>
+                <td>@a.EmployeeType</td>
+                <td>@a.Id</td>
+                <td>@a.Email</td>
+                <td>@a.Gender</td>
+            </tr>
         }
         </tbody>
-    </table>*@
+    </table>
 
     </body>
 
 </html>
-<script>
+@*<script>
     $('#chooseBtn').on('click',
         function() {
             $('#file-input').trigger('click');
         });
-</script>
+</script>*@
