@@ -14,7 +14,6 @@ C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\DataConventer.TagHelpers.input.cache
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\DataConventer.TagHelpers.output.cache
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\DataConventer.RazorCoreGenerate.cache
-C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\DataConventer.RazorTargetAssemblyInfo.cache
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\DataConventer.RazorTargetAssemblyInfo.cs
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\DataConventer.Views.pdb
@@ -48,3 +47,5 @@ C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\bin\Debug\netcoreapp
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\bin\Debug\netcoreapp2.1\pl\Microsoft.VisualStudio.Imaging.resources.dll
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\bin\Debug\netcoreapp2.1\en\Microsoft.VisualStudio.Utilities.resources.dll
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\bin\Debug\netcoreapp2.1\pl\Microsoft.VisualStudio.Utilities.resources.dll
+C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\Razor\Views\Home\UsersCsv.g.cshtml.cs
+C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\Razor\Views\Home\PhoneXml.g.cshtml.cs

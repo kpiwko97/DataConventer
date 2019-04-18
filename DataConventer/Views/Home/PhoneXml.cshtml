@@ -1,0 +1,30 @@
+﻿@model Phone[]
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>title</title>
+    </head>
+    <body> 
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>EmployeeType </th>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>EndDate</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var a in @Model)
+        {
+            <tr>
+                <td>@a.Value</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    </body>
+
+</html>

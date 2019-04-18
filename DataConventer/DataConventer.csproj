@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Home\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -37,6 +36,12 @@
     <Reference Include="Microsoft.VisualStudio.Web.HTML">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\Microsoft.VisualStudio.Web.HTML.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\PhoneXml.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -46,22 +46,22 @@ namespace DataConventer.Models
                 LastName = columns[3],
                 Email = await Task.Run(() => ValidEmail(columns[4])),
                 Gender = await Task.Run(() => ValidPropertyEnum<Sex>(columns[5])),
-                EndDate = columns[6],
+                EndDate = await Task.Run(() => ValidEndDate(columns[6])),
                 Extension1 = columns[7]
             };
         }
 
-       public static TEnum ValidPropertyEnum<TEnum>(string column) where TEnum : struct
+        public static TEnum ValidPropertyEnum<TEnum>(string column) where TEnum : struct
        {
             Enum.TryParse(column, out TEnum enumType);
             return enumType;
        }
-       public static string ValidId(string column)
+        public static string ValidId(string column)
        {
             if (String.IsNullOrWhiteSpace(column)) Console.WriteLine("Empty");
             return column;
        }
-       public static string ValidEmail(string column)
+        public static string ValidEmail(string column)
        {
             try
             {
@@ -74,5 +74,10 @@ namespace DataConventer.Models
                 return String.Empty;
             }
        }
+        public static string ValidEndDate(string column)
+        {
+            DateTime.TryParse(column,out DateTime result);
+            return result>DateTime.Now? result.ToShortDateString():string.Empty;
+        }
     }
 }
