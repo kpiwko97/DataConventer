@@ -9,8 +9,9 @@ namespace DataConventer.Models
     {
         string Id { get; set; }
         string UserName { get; set; }
-        string PhoneType { get; set; }
-        string Value { get; set; }
+        string Phone1 { get; set; }
+        string Phone2 { get; set; }
+        string Phone3 { get; set; }
     }
 
 }

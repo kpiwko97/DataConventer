@@ -8,18 +8,22 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>EmployeeType </th>
+            <th>UserName</th>
             <th>Id</th>
-            <th>Email</th>
-            <th>Gender</th>
-            <th>EndDate</th>
+            <th>Phone1</th>
+            <th>Phone2</th>
+            <th>Phone3</th>
         </tr>
         </thead>
         <tbody>
         @foreach (var a in @Model)
         {
             <tr>
-                <td>@a.Value</td>
+                <td>@a.UserName</td>
+                <td>@a.Id</td>
+                <td>@a.Phone1</td>
+                <td>@a.Phone2</td>
+                <td>@a.Phone3</td>
             </tr>
         }
         </tbody>

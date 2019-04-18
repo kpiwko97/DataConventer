@@ -10,29 +10,22 @@ namespace DataConventer.Models
     {
         public string Id { get; set; }
         public string UserName { get; set; }
-        public string PhoneType { get; set; }
-        public string Value { get; set; }
+        public string Phone1 { get; set; }
+        public string Phone2 { get; set; }
+        public string Phone3 { get; set; }
 
-        public static async Task<Phone> ParseFromXmlAsync(XElement objects)
+        public static async Task<Phone> ParseFromXmlAsync(List<XElement> objects)
         {
             
             Console.WriteLine(DateTime.Now.ToString("hh.mm.ss.fff"));//Performance
+
             return new Phone
             {
-                Id = "a",
-                UserName = "b",
-                PhoneType = "c",
-                Value = "d"
-
-
-                //EmployeeType = await Task.Run(() => ValidPropertyEnum<TypeOfWork>(columns[0])),
-                //Id = await Task.Run(() => ValidId(columns[1])),
-                //FirstName = columns[2],
-                //LastName = columns[3],
-                //Email = await Task.Run(() => ValidEmail(columns[4])),
-                //Gender = await Task.Run(() => ValidPropertyEnum<Sex>(columns[5])),
-                //EndDate = await Task.Run(() => ValidEndDate(columns[6])),
-                //Extension1 = columns[7]
+                Id = await Task.Run(()=>objects[0].Elements().Single(phoneElement => phoneElement.Attribute("Name")?.Value == "id").Value),
+                UserName = await Task.Run(() => objects[0].Elements().Single(phoneElement => phoneElement.Attribute("Name")?.Value == "username").Value),
+                Phone1 = await Task.Run(() => objects[0].Elements().Single(phoneElement => phoneElement.Attribute("Name")?.Value == "value").Value),
+                Phone2 = await Task.Run(() =>objects.Count()>1?objects[1].Elements().Single(phoneElement => phoneElement.Attribute("Name")?.Value == "value").Value:String.Empty),
+                Phone3 = await Task.Run(() => objects.Count() > 2 ? objects[2].Elements().Single(phoneElement => phoneElement.Attribute("Name")?.Value == "value").Value : String.Empty),
             };
         }
 
