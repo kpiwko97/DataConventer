@@ -1,4 +1,4 @@
-﻿@model Phone[]
+﻿@model Dictionary<string,Phone>[]
     <!DOCTYPE html>
     <html>
     <head>
@@ -19,11 +19,8 @@
         @foreach (var a in @Model)
         {
             <tr>
-                <td>@a.UserName</td>
-                <td>@a.Id</td>
-                <td>@a.Phone1</td>
-                <td>@a.Phone2</td>
-                <td>@a.Phone3</td>
+                <th>@a.Keys</th>
+                <th>@a.Values</th>
             </tr>
         }
         </tbody>

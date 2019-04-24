@@ -4,7 +4,8 @@ using System.Threading.Tasks;
 
 namespace DataConventer.Models
 {
-    public class Users:IUsers,IParseFromCsv
+  
+    public class Users:IUsers
     {
         public TypeOfWork EmployeeType { get; set; }
         public string Id { get; set; }
@@ -15,22 +16,10 @@ namespace DataConventer.Models
         public string EndDate { get; set; }
         public string Extension1 { get; set; }
 
-        public enum TypeOfWork
-        {
-            WrongType,
-            Contractor,
-            FullTime,
-        }
-        public enum Sex
-        {
-            Male,
-            Female
-        }
-
         public static async Task<Users> ParseFromCsvAsync(string line)
         {           
             String[] columns = line.Replace("\"", "").Split(',');
-            Console.WriteLine(DateTime.Now.ToString("hh.mm.ss.fff"));//Performance
+            Console.WriteLine("C "+ DateTime.Now.ToString("hh.mm.ss.fff"));//Performance
             return new Users
             {
                 EmployeeType = await Task.Run(() => ValidPropertyEnum<TypeOfWork>(columns[0])),
