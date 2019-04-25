@@ -25,6 +25,7 @@ namespace DataConventer.Models
     }
      public enum Sex
     {
+        WrongType,
         Male,
         Female
     }

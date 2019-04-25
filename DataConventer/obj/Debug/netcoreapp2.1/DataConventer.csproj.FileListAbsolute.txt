@@ -50,3 +50,4 @@ C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\bin\Debug\netcoreapp
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\Razor\Views\Home\UsersCsv.g.cshtml.cs
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\Razor\Views\Home\PhoneXml.g.cshtml.cs
 C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\Razor\Views\Home\EmployeeJson.g.cshtml.cs
+C:\Users\hp 840 g3\source\repos\DataConventer\DataConventer\obj\Debug\netcoreapp2.1\Razor\Views\Home\EmployeeIEnumerable.g.cshtml.cs
